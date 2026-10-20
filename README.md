@@ -32,7 +32,7 @@ El launcher descargará la versión más reciente cada vez que se actualice este
 ## Créditos
 
 - **Traducción:** [Thord82/Star_citizen_ES](https://github.com/Thord82/Star_citizen_ES) (rama `propuestas_thord`). Todo el mérito de la traducción es suyo; los errores de traducción se reportan en su repositorio.
-- **Mejoras:** generadas con Smart Citizen (v2.3.1) de Osiris DevWorks a partir del `Data.p4k` del juego.
+- **Mejoras:** generadas con Smart Citizen (v2.4.0) de Osiris DevWorks a partir del `Data.p4k` del juego.
 - Las claves que aún no están traducidas aparecen en inglés.
 
 Proyecto no oficial, sin relación con Cloud Imperium Games.
