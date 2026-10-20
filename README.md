@@ -1,9 +1,12 @@
 # Star Citizen en español + mejoras de Smart Citizen
 
-Traducción al español de Star Citizen con las **mejoras de Smart Citizen** integradas: estadísticas de naves, componentes, armas y misiles en sus descripciones, recompensas de misiones (XP, blueprints), datos de fabricación y más.
+Traducción al español de Star Citizen con las **mejoras de Smart Citizen** integradas: estadísticas de naves, componentes, armas y misiles en sus descripciones, recompensas de misiones (XP, planos), datos de fabricación y más.
 
 - **Versión del juego:** Alpha 4.10 (LIVE)
-- **Archivo:** `live/global.ini`
+- **Archivo:** [`live/global.ini`](live/global.ini)
+
+> ⚙️ **Sistema semiautomático, no gestionado.**
+> Este repositorio no tiene a nadie revisándolo ni manteniéndolo de forma activa. El archivo se regenera con Smart Citizen tras cada parche o actualización de la traducción, y el resto del proceso es automático. Si algo se rompe, se corregirá, pero sin plazos ni garantías. Los errores de traducción se reportan en [el repositorio de Thord82](https://github.com/Thord82/Star_citizen_ES/issues), no aquí.
 
 ## Instalación con SC Launch Configurator (recomendado)
 
@@ -13,9 +16,9 @@ Traducción al español de Star Citizen con las **mejoras de Smart Citizen** int
    ```
    https://raw.githubusercontent.com/Crosus97/StarCitizen-ES-SmartCitizen/refs/heads/main/live/global.ini
    ```
-4. Pulsa **Validate** y luego **Aplicar**. Deja **Blueprint URL** vacío.
+4. Pulsa **Validate** y luego **Aplicar**. Deja **Blueprint URL** vacío: los planos ya vienen incluidos en las misiones.
 
-El launcher descargará la versión más reciente cada vez que se actualice este repo.
+La URL no cambia nunca: el launcher descarga la versión más reciente cada vez que se actualiza este repo.
 
 ## Instalación manual
 
@@ -29,10 +32,20 @@ El launcher descargará la versión más reciente cada vez que se actualice este
    g_language = spanish_(spain)
    ```
 
+> No uses a la vez SC Launch Configurator y Smart Citizen en el mismo PC: los dos escriben el mismo `global.ini` y el último que se ejecuta pisa al otro.
+
+## Cómo se actualiza
+
+1. Se genera `global.ini` con Smart Citizen a partir de la traducción de Thord82 y del `Data.p4k` del juego (este paso es manual: necesita el juego instalado).
+2. Al subirlo, una GitHub Action ([`branding.yml`](.github/workflows/branding.yml)) cambia automáticamente la línea de versión de la pantalla de inicio.
+
 ## Créditos
 
-- **Traducción:** [Thord82/Star_citizen_ES](https://github.com/Thord82/Star_citizen_ES) (rama `propuestas_thord`). Todo el mérito de la traducción es suyo; los errores de traducción se reportan en su repositorio.
-- **Mejoras:** generadas con Smart Citizen (v2.4.0) de Osiris DevWorks a partir del `Data.p4k` del juego.
-- Las claves que aún no están traducidas aparecen en inglés.
+- **Traducción:** [Thord82/Star_citizen_ES](https://github.com/Thord82/Star_citizen_ES) (rama `propuestas_thord`). Todo el mérito de la traducción es suyo.
+- **Mejoras:** generadas con Smart Citizen (v2.4.0) de Osiris DevWorks.
+- **Recopilación y automatización:** Crosus97.
+- Los textos que aún no están traducidos aparecen en inglés.
+
+¿Usas SCMDB? → Traducción al español en [SCMDB_LANG](https://github.com/Crosus97/SCMDB_LANG)
 
 Proyecto no oficial, sin relación con Cloud Imperium Games.
