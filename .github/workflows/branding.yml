@@ -1,0 +1,30 @@
+name: Branding global.ini
+
+# Every time live/global.ini is uploaded, replace Smart Citizen's
+# "Localizations Enhanced with..." line with our own credit line.
+on:
+  push:
+    branches: [main]
+    paths: [live/global.ini]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  branding:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply branding
+        run: python3 scripts/branding.py live/global.ini
+      - name: Commit if changed
+        run: |
+          if git diff --quiet; then
+            echo "Already branded, nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Aplica branding a Frontend_PU_Version"
+          git push
